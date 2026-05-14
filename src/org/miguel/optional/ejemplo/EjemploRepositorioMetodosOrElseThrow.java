@@ -4,6 +4,9 @@ import org.miguel.optional.ejemplo.models.Computador;
 import org.miguel.optional.ejemplo.repositorio.ComputadorRepositorio;
 import org.miguel.optional.ejemplo.repositorio.Repositorio;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 import java.util.Optional;
 
 public class EjemploRepositorioMetodosOrElseThrow {
@@ -19,6 +22,5 @@ public class EjemploRepositorioMetodosOrElseThrow {
         .map(a -> a.substring(archivo.lastIndexOf(".") + 1))
         .orElseThrow();
     System.out.println(extension);
-
   }
 }

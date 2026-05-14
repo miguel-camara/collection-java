@@ -1,21 +1,26 @@
 package org.miguel.collection.set;
 
+import static java.util.Comparator.comparing;
+
 import java.util.*;
 
+import org.miguel.collection.modelo.Alumno;
+
 public class EjemploHashSetAgregar {
-    public static void main(String[] args) {
+  public static void main(String[] args) {
 
-        Set<String> hs = new HashSet<>();
-        System.out.println(hs.add("uno"));
-        System.out.println(hs.add("dos"));
-        System.out.println(hs.add("tres"));
-        System.out.println(hs.add("cuatro"));
-        System.out.println(hs.add("cinco"));
-        System.out.println(hs);
+    Set<String> hs = new HashSet<>();
+    hs.add("uno");
+    hs.add("dos");
+    hs.add("tres");
+    hs.add("cuatro");
+    hs.add("cinco");
 
-        boolean b = hs.add("tres");
-        System.out.println("permite elementos duplicados = " + b);
-        System.out.println(hs);
+    System.out.println(hs);
 
-    }
+     boolean b = hs.add("tres");
+    System.out.println("permite elementos duplicados = " + b);
+    System.out.println(hs);
+
+  }
 }

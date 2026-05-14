@@ -2,6 +2,7 @@ package org.miguel.stream.ejemplos;
 
 import org.miguel.stream.ejemplos.models.Usuario;
 
+import java.util.Arrays;
 import java.util.Optional;
 import java.util.stream.Stream;
 

@@ -60,18 +60,34 @@ public class Alumno implements Comparable<Alumno> {
   }
 
   @Override
-  public boolean equals(Object o) {
-    if (this == o)
-      return true;
-    if (o == null || getClass() != o.getClass())
-      return false;
-    Alumno alumno = (Alumno) o;
-    return Objects.equals(nombre, alumno.nombre) &&
-        Objects.equals(nota, alumno.nota);
+  public int hashCode() {
+    final int prime = 31;
+    int result = 1;
+    result = prime * result + ((nombre == null) ? 0 : nombre.hashCode());
+    result = prime * result + ((nota == null) ? 0 : nota.hashCode());
+    return result;
   }
 
   @Override
-  public int hashCode() {
-    return Objects.hash(nombre, nota);
+  public boolean equals(Object obj) {
+    if (this == obj)
+      return true;
+    if (obj == null)
+      return false;
+    if (getClass() != obj.getClass())
+      return false;
+    Alumno other = (Alumno) obj;
+    if (nombre == null) {
+      if (other.nombre != null)
+        return false;
+    } else if (!nombre.equals(other.nombre))
+      return false;
+    if (nota == null) {
+      if (other.nota != null)
+        return false;
+    } else if (!nota.equals(other.nota))
+      return false;
+    return true;
   }
+
 }

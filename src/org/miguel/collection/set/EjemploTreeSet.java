@@ -1,6 +1,8 @@
 package org.miguel.collection.set;
 
+import java.util.ArrayList;
 import java.util.Comparator;
+import java.util.List;
 import java.util.Set;
 import java.util.TreeSet;
 
@@ -8,7 +10,6 @@ public class EjemploTreeSet {
   public static void main(String[] args) {
 
     Set<String> ts = new TreeSet<>((a, b) -> a.compareTo(b));
-
     ts.add("uno");
     ts.add("dos");
     ts.add("tres");
@@ -17,6 +18,11 @@ public class EjemploTreeSet {
     ts.add("cinco");
 
     System.out.println("ts = " + ts);
+
+    List<String> list = new ArrayList<>(ts);
+    list.sort(Comparator.reverseOrder());
+
+    System.out.println(list);
 
     Set<Integer> numeros = new TreeSet<>(Comparator.reverseOrder());
     numeros.add(1);
